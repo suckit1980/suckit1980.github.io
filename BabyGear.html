@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+   <!--
+      Baby Gear
+      Author:Daniel Rhoades 
+      Date:9/4/2016   
+
+      Filename:         BabyGear.htm
+      Supporting files: babyontheway.png, babystyles.css, modernizr-1.5.js, thirds.jpg
+   -->
+      <meta charset="UTF-8" />
+      <title>Baby Gear</title>
+      <script src="modernizr-1.5.js"></script>
+      <link href="babystyles.css" rel="stylesheet" type="text/css" />
+   </head>
+
+   <body>
+
+      <header>
+        
+		<img src="babyontheway.png" alt="babyontheway" /> 
+			
+      </header>
+	  <nav>
+		<ul>
+			<li><a href="index.html">Baby on the Way</a></li>
+			<li><a href="BabyGear.html">Baby Gear</a></li>
+			<li><a href="BabyClasses.html">Baby Classes</a></li>
+		</ul>
+	  </nav>
+
+
+      <section class="full">
+
+         <h1>Baby's New Gear</h1>
+
+         <article>
+            <h1>Strollers and Car seats</h1>
+            <p>Buying your stroller and car seat together is generally a good idea
+			so you can be sure that the car seat attaches to the stroller properly.
+			We went with a jogging stroller so we can take baby on trail hikes. 
+            </p>
+			<h1>Cribs and Changing Station</h1>
+            <p>This all important baby furniture will be apart of yours and baby's 
+			daily lives pick something that is functional and esteticaly pleasing.
+			We found great deals on craigslist.
+            </p>
+
+            <figure>
+               <img src="babystuff.jpeg" alt="photo" />
+            </figure>
+
+            <h1>Breast pumps and Nursing Pillows</h1>
+			<p>Breast feeding is all important and keeping the milk flowing is
+			important as well. We decided to go with a Medela breast pump. We read many 
+			articles and all said Medela was the best.
+			
+            </p>
+         </article>
+
+         <article>
+            <h1>Places to buy baby gear.</h1>
+            <p>After hours of watching my lovely lady shop I have deduced that these 
+			   websites have the best gear at the most reasonable prices.
+            </p>
+
+            <dl>
+               <dt>&#9758; <a href="http://www.babiesrus.com" 
+			   target="new">Babies R Us</a></dt>
+               <dd>Babies R us has agreat selection and they love to send you 
+				   catalogs with useful coupons.
+               </dd>
+               <dt>&#9758; <a href="http://www.target.com/c/baby/-/N-5xtly#?lnk=gnav_baby_3_0"
+			   target="new">Target</a></dt>
+               <dd>Targets website is suprisingly easy to set up a baby shower registry.  
+                   They also have a great selection of strollers and car seats. If you 
+				   want Eddie Bower this is the only store that carries that brand.
+               </dd>
+               <dt>&#9758; <a href="http://www.diapers.com" 
+			   target="new">Diapers.com</a></dt>
+               <dd>Diapers.com has everything and the kitchen sink for your baby
+			       with some really great deals. Plus next day delivery is awesome.
+               </dd>
+               <dt>&#9758; <a href="http://www.sears.com/baby/b-1020004" 
+			   target="new">Sears</a></dt>
+               <dd>Sears has a great selection of baby gear. Generally I think of Sears
+			       as a place to buy tools but they have a great baby selection.
+               </dd> 
+            </dl>
+         </article>
+		 
+		 <article>
+			<h1>Baby Gear Cost Calculator</h1>
+			<dl> Add up your wanted items here so you know how much to save.</dl>
+			
+			<p></p><!--adds a space-->
+				<dd>
+				<FORM NAME="Calc">
+				<!--sets border size-->
+				<TABLE BORDER=20>
+					<TR>
+					<TD>
+					<!--sets input type and size-->
+					<INPUT TYPE="text"   NAME="Input" Size="24">
+					<br>
+					</TD>
+					</TR>
+					<TR>
+					<TD>
+					<!-- buttons 1 through 3 and add -->
+					<INPUT TYPE="button" NAME="one"   VALUE="  1  " OnClick="Calc.Input.value += '1'">
+					<INPUT TYPE="button" NAME="two"   VALUE="  2  " OnCLick="Calc.Input.value += '2'">
+					<INPUT TYPE="button" NAME="three" VALUE="  3  " OnClick="Calc.Input.value += '3'">
+					<INPUT TYPE="button" NAME="plus"  VALUE="  +  " OnClick="Calc.Input.value += ' + '">
+					<br>
+					<!-- buttons 4 through 6 and subtract -->
+					<INPUT TYPE="button" NAME="four"  VALUE="  4  " OnClick="Calc.Input.value += '4'">
+					<INPUT TYPE="button" NAME="five"  VALUE="  5  " OnCLick="Calc.Input.value += '5'">
+					<INPUT TYPE="button" NAME="six"   VALUE="  6  " OnClick="Calc.Input.value += '6'">
+					<INPUT TYPE="button" NAME="minus" VALUE="  -  " OnClick="Calc.Input.value += ' - '">
+					<br>
+					<!-- buttons 7 through 9 and multiply -->
+					<INPUT TYPE="button" NAME="seven" VALUE="  7  " OnClick="Calc.Input.value += '7'">
+					<INPUT TYPE="button" NAME="eight" VALUE="  8  " OnCLick="Calc.Input.value += '8'">
+					<INPUT TYPE="button" NAME="nine"  VALUE="  9  " OnClick="Calc.Input.value += '9'">
+					<INPUT TYPE="button" NAME="multiply" VALUE="  x  " OnClick="Calc.Input.value += ' * '">
+					<br>
+					<!-- buttons 0 and other actions -->
+					<INPUT TYPE="button" NAME="clear" VALUE="  clear  " OnClick="Calc.Input.value = ''">
+					<INPUT TYPE="button" NAME="zero"  VALUE="  0  " OnClick="Calc.Input.value += '0'">
+					<INPUT TYPE="button" NAME="equal"  VALUE="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
+					<INPUT TYPE="button" NAME="div"   VALUE="  /  " OnClick="Calc.Input.value += ' / '">
+					<br>
+					</TD>
+					</TR>
+					</TABLE>
+					</FORM>
+					</dd>
+		 </article>
+		 <p></p><!--adds a space-->
+		
+      </section>
+
+
+      <footer>
+         <address>
+            The joy of planning a future, Baby on the Way.
+         </address>
+      </footer>
+
+   </body>
+
+</html>
