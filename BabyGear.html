@@ -12,7 +12,8 @@
    -->
       <meta charset="UTF-8" />
       <title>Baby Gear</title>
-      <script src="modernizr-1.5.js"></script>
+      <script src="">modernizr.custom.05819</script>
+	  <script src="bw.js"></script>
       <link href="babystyles.css" rel="stylesheet" type="text/css" />
    </head>
 
@@ -28,6 +29,7 @@
 			<li><a href="index.html">Baby on the Way</a></li>
 			<li><a href="BabyGear.html">Baby Gear</a></li>
 			<li><a href="BabyClasses.html">Baby Classes</a></li>
+			<li><a href="Additions.html">Additions</a></li>
 		</ul>
 	  </nav>
 
@@ -92,64 +94,41 @@
          </article>
 		 
 		 <article>
-			<h1>Baby Gear Cost Calculator</h1>
-			<dl> Add up your wanted items here so you know how much to save.</dl>
+			<h1>Baby Formula Cost Calculator</h1>
+			<dl> Find out how much you will spend on formula.</dl>
 			
-			<p></p><!--adds a space-->
+			<p></p>
 				<dd>
-				<FORM NAME="Calc">
-				<!--sets border size-->
-				<TABLE BORDER=20>
-					<TR>
-					<TD>
-					<!--sets input type and size-->
-					<INPUT TYPE="text"   NAME="Input" Size="24">
-					<br>
-					</TD>
-					</TR>
-					<TR>
-					<TD>
-					<!-- buttons 1 through 3 and add -->
-					<INPUT TYPE="button" NAME="one"   VALUE="  1  " OnClick="Calc.Input.value += '1'">
-					<INPUT TYPE="button" NAME="two"   VALUE="  2  " OnCLick="Calc.Input.value += '2'">
-					<INPUT TYPE="button" NAME="three" VALUE="  3  " OnClick="Calc.Input.value += '3'">
-					<INPUT TYPE="button" NAME="plus"  VALUE="  +  " OnClick="Calc.Input.value += ' + '">
-					<br>
-					<!-- buttons 4 through 6 and subtract -->
-					<INPUT TYPE="button" NAME="four"  VALUE="  4  " OnClick="Calc.Input.value += '4'">
-					<INPUT TYPE="button" NAME="five"  VALUE="  5  " OnCLick="Calc.Input.value += '5'">
-					<INPUT TYPE="button" NAME="six"   VALUE="  6  " OnClick="Calc.Input.value += '6'">
-					<INPUT TYPE="button" NAME="minus" VALUE="  -  " OnClick="Calc.Input.value += ' - '">
-					<br>
-					<!-- buttons 7 through 9 and multiply -->
-					<INPUT TYPE="button" NAME="seven" VALUE="  7  " OnClick="Calc.Input.value += '7'">
-					<INPUT TYPE="button" NAME="eight" VALUE="  8  " OnCLick="Calc.Input.value += '8'">
-					<INPUT TYPE="button" NAME="nine"  VALUE="  9  " OnClick="Calc.Input.value += '9'">
-					<INPUT TYPE="button" NAME="multiply" VALUE="  x  " OnClick="Calc.Input.value += ' * '">
-					<br>
-					<!-- buttons 0 and other actions -->
-					<INPUT TYPE="button" NAME="clear" VALUE="  clear  " OnClick="Calc.Input.value = ''">
-					<INPUT TYPE="button" NAME="zero"  VALUE="  0  " OnClick="Calc.Input.value += '0'">
-					<INPUT TYPE="button" NAME="equal"  VALUE="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
-					<INPUT TYPE="button" NAME="div"   VALUE="  /  " OnClick="Calc.Input.value += ' / '">
-					<br>
-					</TD>
-					</TR>
-					</TABLE>
-					</FORM>
-					</dd>
-		 </article>
-		 <p></p><!--adds a space-->
-		
-      </section>
+				<form id="formulaform">
+            <fieldset>
+               
+               <input type="number" min="0" max="5" id="numcans" value="1" />
+               <label for="numcans">
+                  <p>How many cans of formula do you use a week? </p>
+               </label>
 
+               <input type="number" min="0" id="years" value="1" />
+               <label for="years">
+                  <p>How many weeks will you use formula?</p>
+               </label>
+
+			   <label>
+				<p>Total Cost: <span id="totalcost"></span></p>
+			   </label>
+            </fieldset>
+            
+         </form>
+		 <p></p>
+      </article>
+      </section>
+		
 
       <footer>
          <address>
             The joy of planning a future, Baby on the Way.
          </address>
       </footer>
-
+		
    </body>
 
 </html>
