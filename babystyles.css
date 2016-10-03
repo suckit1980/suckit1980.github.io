@@ -47,7 +47,7 @@ font-size: 0.8em;
 nav ul li {
 display: block;
 float: left;
-width: 15.6%;
+width: 20.6%;
 height: 20px;
 text-align: center;
 border: 1px solid #2d04ff;
@@ -313,62 +313,131 @@ table.calendar td dd                    {
 }m
 
 form {
-   width: 560px;
+   width: 561px;
    margin: 0 auto;
+   padding-bottom: 15px;
 }
 
-form fieldset{
-   border: 1px solid #2d04ff;
+fieldset {
+   position: relative;
+   padding: 5px 30px 70px 30px;
    background: white;
-   position: relative;
+   border-radius: 5px;
+   margin-left: 15px;
+   margin-right: 15px;
+   margin-bottom: 25px;
 }
 
-form legend {
-   font-size: 1.5em;
+fieldset:last-of-type {
+   margin-bottom: 0;
+}
+
+legend {
    font-weight: bold;
-   margin: 10px;
+   font-size: 36px;
+   font-family: tangerine, cursive;
+   position: absolute;
+   padding: 10px 0;
 }
 
-form legend span {
+input, label, select, textarea, fieldset p, div.errorMessage, #ccNumErrorMessage, #cvvErrorMessage {
    position: relative;
-   top: 20px;
+   top: 50px;
+   line-height: 1.2em;
 }
 
-form label {
+label, input {
    display: block;
-   font-size: 1.2em;
-   width: 480px;
-   text-align: right;
 }
-form label p {
-   float: left;
+
+#expMoLabel, #expYrLabel {
+   position: absolute;
+   left: -10000px;
+}
+
+#buttonContainer {
    width: 100%;
+   text-align: center;
+}
+
+#orderButton {
+   margin: 0 auto;
+   font-family: tangerine, cursive;
+   font-size: 24px;
+   top: 15px;
+   -webkit-appearance: none;
+   display: inline-block;
+}
+
+fieldset.checks input, div.checks input {
+   float: left;
+   margin-right: 5px;
+}
+
+fieldset.checks textarea {
+   margin-left: 21px;
+   width: 90%;
+   height: 50px;
+}
+
+fieldset.text label {
+   width: 8em;
    text-align: right;
+   float: left;
+   clear: left;
+   margin-right: 10px;
+   margin-top: 5px;
 }
 
-form label p:nth-child(2) {
-   font-size: 0.8em;
+fieldset.text input, fieldset.text select {
+   margin-top: 5px;
+   margin-right: 5px;
 }
 
-form input {
-   padding: 1%;
-   background: #afd3f3;
-   color: black;
-   border: 1px solid #2d04ff
-   font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-   float: right;
-   clear: both;
-   width: 60px;
-   margin-left: 10px;
-   margin-bottom: 20px;
-   position: relative;
-   top: -0.4em;
+fieldset div.errorMessage, #ccNumErrorMessage, #cvvErrorMessage {
+   display: none;
+   color: red;
+   margin-top: 10px;
 }
 
-form input[type="checkbox"] {
-   position: static;
+#ccNumErrorMessage, #cvvErrorMessage {
+   margin-left: 8.5em;
 }
 
-label #totalcost {
-   font-weight: bold;
+div.checks label {
+   width: auto;
+   text-align: left;
+   float: none;
+   clear: none;
+}
+
+div.inline label, div.inline input, div.inline select, div.inline div {
+   display: inline-block;
+   float: none;
+   text-align: center;
+   width: auto;
+}
+
+div.inline option {
+   text-align: left;
+}
+
+#billFName, #billLName, #delivFName, #delivLName, #billCity, #delivCity, #billPhone, #delivPhone {
+   width: 15em;
+}
+
+#billStreet, #delivStreet, #billEmail, #delivEmail {
+   width: 20em;
+}
+
+#billZip, #delivZip {
+   width: 10em;
+}
+
+#ccNum {
+   width: 16em;
+}
+
+#cvv {
+   width: 4em;
 }
