@@ -312,63 +312,18 @@ table.calendar td dd                    {
 	padding: 0px;
 }m
 
+/* form */
 form {
-   width: 560px;
    margin: 0 auto;
 }
 
-form fieldset{
-   border: 1px solid #2d04ff;
-   background: white;
-   position: relative;
-}
-
-form legend {
-   font-size: 1.5em;
-   font-weight: bold;
+input {
+   float: left;
+   clear: left;
    margin: 10px;
 }
 
-form legend span {
-   position: relative;
-   top: 20px;
-}
-
-form label {
-   display: block;
-   font-size: 1.2em;
-   width: 480px;
-   text-align: right;
-}
-form label p {
+label {
    float: left;
-   width: 100%;
-   text-align: right;
-}
-
-form label p:nth-child(2) {
-   font-size: 0.8em;
-}
-
-form input {
-   padding: 1%;
-   background: #afd3f3;
-   color: black;
-   border: 1px solid #2d04ff
-   font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-   float: right;
-   clear: both;
-   width: 60px;
-   margin-left: 10px;
-   margin-bottom: 20px;
-   position: relative;
-   top: -0.4em;
-}
-
-form input[type="checkbox"] {
-   position: static;
-}
-
-label #totalcost {
-   font-weight: bold;
+   font-size: 1.4em;
 }
