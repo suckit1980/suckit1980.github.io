@@ -4,30 +4,42 @@
  *filename learn.js
  */
 
-
-function calcTotal() {
-	//establish varabiles
-		var itemTotal = 0;
-		var item1 = document.getElementById("item1");
-		var item2 = document.getElementById("item2");
-		var item3 = document.getElementById("item3");
-		var item4 = document.getElementById("item4");
-		var item5 = document.getElementById("item5");
-		var item6 = document.getElementById("item6");
-		var item7 = document.getElementById("item7");
-		var item8 = document.getElementById("item8");
-	//assign value to variables
-		(item1.checked) ? (itemTotal += 19) : (itemTotal += 0);
-		(item2.checked) ? (itemTotal += 24) : (itemTotal += 0);
-		(item3.checked) ? (itemTotal += 25) : (itemTotal += 0);
-		(item4.checked) ? (itemTotal += 17) : (itemTotal += 0);
-		(item5.checked) ? (itemTotal += 13) : (itemTotal += 0);
-		(item6.checked) ? (itemTotal += 12) : (itemTotal += 0);
-		(item7.checked) ? (itemTotal += 13) : (itemTotal += 0);
-		(item8.checked) ? (itemTotal += 9) : (itemTotal += 0);
-		var salesTaxRate = 0.12;
-	//create orderTotal variable and messege
-		var orderTotal = itemTotal + (itemTotal * salesTaxRate);
-		alert("Your order total is $" + orderTotal);	
+ 
+//add selected values
+   function calcTotal() {
+	var itemTotal = 0;
+	var items = document.getElementsByTagName("input");
+	for (var i = 0; i < 8; i++) {
+		if (items[i].checked) {
+			itemTotal += (items[i].value * 1);
+		}
 	}
-	document.getElementById("submit").addEventListener("click", calcTotal, false);
+	document.getElementById("total").innerHTML = "Your order total is $" + itemTotal + ".00";
+   }
+   
+   
+   //event listener for submit button
+   var submitButton = document.getElementById("sButton");
+   if (submitButton.addEventListener) {
+	   submitButton.addEventListener("click", calcTotal, false);
+   } else if (submitButton.attachEvent) {
+	   submitButton.attachEvent("onclick", calcTotal);
+   }
+	//placeholders for ancient Internet Explorer	
+function insertPlaceholders() {
+		if (!Modernizr.input.placeholder) {
+			document.getElementById("nameinput").value = "first and last name";
+			document.getElementById("emailinput").value = "address@example.com";
+			document.getElementById("phoneinput").value = "###-###-####";
+			document.getElementById("homeaddressinput").value = "home address";
+			document.getElementById("cityandstateinput").value = "city and state";
+			document.getElementById("zipcodeinput").value = "zipcode";
+		}
+   }
+   if  (window.addEventListener) {
+		window.addEventListener("load", insertPlaceholders, false);   
+   } else if (window.attachEvent) {
+	   window.attachEvent("onload", insertPlaceholders);
+   }
+   
+   

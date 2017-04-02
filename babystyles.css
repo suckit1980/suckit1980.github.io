@@ -314,7 +314,7 @@ table.calendar td dd                    {
 
 /* form */
 form {
-   margin: 0 auto;
+   float: left;
 }
 
 input {
@@ -327,3 +327,14 @@ label {
    float: left;
    font-size: 1.4em;
 }
+
+/* total div */
+article div {
+   width: 50%;
+   float: right;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+
+
