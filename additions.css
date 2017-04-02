@@ -1,0 +1,168 @@
+/*Filename: styles.css */
+
+
+
+body {
+   line-height: 1;
+   max-width: 960px;
+   background: white;
+   margin: 0 auto;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+width: 100%;
+text-align: left;
+}
+
+nav {
+display: block;
+width: 100%;
+}
+
+section nav {
+font-size: 0.9em;
+text-align: center;
+padding-bottom: 20px;
+}
+
+
+nav ul {
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+font-size: 0.8em;
+}
+
+nav ul li {
+display: block;
+float: left;
+width: 17.7%;
+height: 20px;
+text-align: center;
+border: 1px solid #2d04ff;
+background-color: #afd3f3;
+line-height: 1.5em;
+margin: 0px 4px 5px 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+margin: 1em 0em;
+font-size: 2em;
+}
+
+h2 {
+margin: 1em 0em;
+font-size: 1.5em;
+}
+
+header h1 {
+margin: 0px;
+}
+
+header h2 {
+font-size: 1.2em;
+font-style: italic;
+margin: 0em;
+padding-bottom: 0.5em;
+border-bottom:1px black solid;
+}
+
+/* main content */
+article {
+   width: 960px;
+   text-align: center;
+   background: blue;
+   padding-bottom: 20px;
+   border-bottom: 1px solid black;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+}
+
+article h2 {
+   font-weight: bold;
+   font-size: 24px;
+   padding: 10px;
+}
+
+form div {
+   border: 1px solid red;
+   background: rgb(255,233,233);
+   width: 80%;
+   margin: 0 auto;
+   padding: 10px;
+   display: none;
+}
+
+/* form */
+
+fieldset {
+  padding: 1em;
+  background: white;
+  text-align: right;
+}
+
+form {
+  background: white;
+  padding: 10px 5px 7px 5px;
+  margin: 0 auto;
+  width: 30em;
+  border: 2px solid black;
+}
+
+input {
+  font-size: 1em;
+  float: left;
+}
+
+#ssn1, #ssn2, #ssn3 {
+   display: inline-block;
+   margin-right: 0.3em;
+}
+
+#ssn1 {
+   width: 3em;
+}
+
+#ssn2 {
+   width: 2em;
+}
+
+#ssn3 {
+   width: 4em;
+}
+
+#ssn2label, #ssn3label {
+   position: absolute;
+   left: -5000px;
+}
+
+input:focus {
+  background: #e3d5ba;
+}
+
+label {
+  display: block;
+  margin: 0.5em 1em 0 0;
+  float: left;
+  clear: left;
+  width: 10em;
+}
+
+#submitsection {
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+#submitBtn {
+   float: none;
+}
