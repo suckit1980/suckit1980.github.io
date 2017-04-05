@@ -1,6 +1,10 @@
 /*filename additions.js
  */
 
+ /*In order to debug this program I simply used break points. This allowed me to find
+compilation points of interest. Once I did that I tried console.log and found 
+everything to be working well. */
+
 "use strict"; //interpret document contents in JavaScript strict mode
 
 // global variables 
