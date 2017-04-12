@@ -2,16 +2,73 @@
 
 
 
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
 body {
    line-height: 1;
-   max-width: 960px;
-   background: white;
+   width: 800px;
    margin: 0 auto;
-   font-family: Arial, Helvetica, sans-serif; 
+   font-family: roboto, arial, helvetica, sans-serif;
+   background: black;
+   background: url(images/tile.jpg) repeat;
+   background: url(images/bg.jpg) left top no-repeat, url(images/tile.jpg) repeat;
 }
 
 ol, ul {
    list-style: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
 }
 
 /* page header */
@@ -20,6 +77,8 @@ width: 100%;
 text-align: left;
 }
 
+
+/* navigation */
 nav {
 display: block;
 width: 100%;
@@ -51,116 +110,251 @@ line-height: 1.5em;
 margin: 0px 4px 5px 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-font-family: Arial, Helvetica, sans-serif;
+section {
+width: 64%;
+float: left;
 }
 
-header h1 {
-margin: 1em 0em;
+section.full {
+width: 100%;
+}
+
+section p {
+font-size: 1.1em;
+margin: 0px 20px 10px 0px;
+}
+
+section.full h1 {
+text-align: center;
+color: #2d04ff;
 font-size: 2em;
+letter-spacing: 0.1em;
 }
 
-h2 {
-margin: 1em 0em;
-font-size: 1.5em;
+section.full p {
+font-size: 0.9em;
+margin: 0px 0px 30px 0px;
 }
 
-header h1 {
-margin: 0px;
+section.full article h1 {
+font-size: 1.1em;
+text-align: left;
+letter-spacing: 0.5em;
+font-weight: normal;
+margin: 0px 0px 5px 0px;
+color: #2d04ff;
 }
 
-header h2 {
-font-size: 1.2em;
-font-style: italic;
-margin: 0em;
-padding-bottom: 0.5em;
-border-bottom:1px black solid;
+section.full article figure {
+display: block;
+width: 100%;
+margin-bottom: 10px;
+}
+
+section.full article figure img {
+display: block;
+margin: 0px auto;
 }
 
 /* main content */
 article {
-   width: 960px;
-   text-align: center;
-   background: white;
-   padding-bottom: 20px;
-   
+   padding: 20px 20px 40px;
+   background: rgb(216,217,219);
+   margin-top: 10px;
+   position: relative;
 }
 
 article h2 {
-   font-weight: bold;
-   font-size: 24px;
-   padding: 10px;
+   font-size: 36pt;
+   font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+   color: rgb(46,49,146);
 }
 
-form div {
-   border: 1px solid red;
-   background: rgb(255,233,233);
-   width: 80%;
-   margin: 0 auto;
-   padding: 10px;
+article h3 {
+   font-size: 24pt;
+   font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+   color: rgb(46,49,146);
+}
+
+article h4 {
+   font-size: 14pt;
+   font-family: roboto, arial, helvetica, sans-serif;
+   color: rgb(46,49,146);
+   margin-top: 10px;
+}
+
+/* ticket section */
+#ticket {
+   float: right;
+   width: 380px;
+   border: 1px solid black;
+   background: white;
+   padding: 20px;
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#ticket, #dateSection, #passengersSection, #countdownSection {
    display: none;
 }
 
+#ticket li, #ticket p {
+   text-indent: 1em;
+   margin-top: 5px;
+}
+
+#countdown {
+   font-weight: bold;
+}
+
 /* form */
+form {
+   width: 380px;
+}
 
 fieldset {
-  padding: 1em;
-  background: white;
-  text-align: right;
+   position: relative;
+   padding: 5px 30px 30px;
+   margin: 0 15px 25px;
 }
 
-form {
-  background: white;
-  padding: 10px 5px 7px 5px;
-  margin: 0 auto;
-  width: 30em;
-  border: 2px solid black;
-}
-
-input {
-  font-size: 1em;
-  float: left;
-}
-
-#ssn1, #ssn2, #ssn3 {
-   display: inline-block;
-   margin-right: 0.3em;
-}
-
-#ssn1 {
-   width: 3em;
-}
-
-#ssn2 {
-   width: 2em;
-}
-
-#ssn3 {
-   width: 4em;
-}
-
-#ssn2label, #ssn3label {
+legend {
+   font-weight: bold;
+   font-size: 24px;
    position: absolute;
-   left: -5000px;
+   padding: 10px 0;
 }
 
-input:focus {
-  background: #e3d5ba;
+input, label {
+   position: relative;
+   top: 50px;
+   line-height: 1.2em;
+   display: block;
 }
 
-label {
-  display: block;
-  margin: 0.5em 1em 0 0;
-  float: left;
-  clear: left;
-  width: 10em;
+fieldset.checks input {
+   float: left;
+   clear: left;
+   margin-right: 5px;
 }
 
-#submitsection {
-  padding: 0.5em 0;
-  text-align: center;
+fieldset.checks label {
+   line-height: 1.2em;
+   margin-bottom: 4px;
 }
 
-#submitBtn {
-   float: none;
+fieldset.text label {
+   width: 6em;
+   text-align: right;
+   float: left;
+   clear: left;
+   margin-right: 10px;
+   margin-top: 5px;
+}
+
+fieldset.text input {
+   margin-top: 5px;
+   margin-right: 5px;
+}
+
+#addName {
+   margin-left: 9.5em;
+}
+
+/* calendar */
+#cal {
+   display: none;
+   position: absolute;
+   left: 230px;
+   top: 65px;
+   background: black;
+   color: white;
+   padding: 10px;
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#cal table {
+   clear: both;
+}
+
+#cal table caption {
+   font-weight: bold;
+   font-size: 14pt;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background: rgb(46,49,146);
+}
+
+#cal table th {
+   text-align: right;
+}
+
+#cal table th, #cal table td {
+   width: 2em;
+   padding: 4px;
+}
+
+#cal table td {
+   color: rgb(178,184,183);
+   text-align: right;
+   cursor: pointer;
+}
+
+#prev {
+   float: left;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#next {
+   float: right;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#cal table td.futuredate {
+   color: white;
+}
+
+#cal table td.futuredate:hover, #prev:hover, #next:hover, #close:hover {
+   background: yellow;
+   color: black;
+}
+
+#close {
+   color: white;
+   float: right;
+   padding: 0 4px;
+   cursor: pointer;
+}
+
+#close span {
+   font-size: 20pt;
+}
+
+/* footer */
+footer {
+   text-align: right;
+   padding-right: 10px;
+}
+
+footer p {
+   display: inline-block;
+   margin-top: 10px;
+   background: black;
+   color: white;
+   font-size: 16px;
+}
+
+footer p span {
+   color: #ffcb40;
 }
