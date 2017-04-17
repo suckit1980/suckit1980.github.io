@@ -10,15 +10,7 @@
 
 /* Section Styles */
 
-body {
-margin: 0px auto;
-padding: 0px;
-line-height: 1.5em;
-width: 98%;
-max-width: 780px;
-min-width: 250px;
-font-family: Verdana, Geneva, sans-serif
-}
+
 
 header {
 width: 100%;
@@ -148,6 +140,76 @@ font-size: 0.7em;
 aside li {
 font-size: 0.8em;
 line-height: 1.1em;
+}
+
+/* form */
+form {
+   width: 441px;
+   float: left;
+}
+
+fieldset.text, fieldset.checks {
+   position: relative;
+   padding: 5px 30px 5px 0;
+   margin-right: 15px;
+}
+
+legend {
+   font-weight: bold;
+   font-size: 18px;
+   text-align: left;
+   padding-left: 1.4em;
+   margin-bottom: 0.5em;
+}
+
+legend span {
+   text-align: right;
+}
+
+input, label {
+   position: relative;
+   line-height: 1.2em;
+   display: block;
+}
+
+fieldset.checks input {
+   float: left;
+   clear: left;
+   margin-right: 5px;
+   margin-left: 5em;
+   font-size: 18px;
+}
+
+fieldset.checks label {
+   line-height: 1.2em;
+   margin-bottom: 4px;
+}
+
+fieldset.text label {
+   width: 10em;
+   text-align: right;
+   float: left;
+   clear: left;
+   margin: 5px 10px 0 0;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+fieldset.text input {
+   margin: 7px 5px 0 0;
+}
+
+input[type=button] {
+   margin: 15px auto 0;
+   font-size: 16px;
+   background: rgb(202,230,233);
+   width: 9em;
+}
+
+p.errorMsg {
+   display: none;
+   color: red;
+   text-align: center;
 }
 
 footer {

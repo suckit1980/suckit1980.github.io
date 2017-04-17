@@ -241,6 +241,7 @@ function createEventListeners() {
    }
 }
 
+
 if (window.addEventListener) {
    window.addEventListener("load", createEventListeners, false);
 } else if (window.attachEvent) {

@@ -34,39 +34,74 @@
 	  </nav>
 
       <section>
-		<p>
+	  <p>
+	  <h3>
 			For the first few years of your childs life they will be 
-			in diapers. Whenever you use diapers you will need baby
-			wipes as well. This is a major expense so here are a few options.
-			
-		
+			in diapers. Start an account with us and we will send you 
+			coupons for your preferred diapers and wipes.
+		</h3>
 		</p>
+	  </section>
+	  
+	  
+	  
+	  <section>
 		<article>
-		<h2>Diaper Selector</h2>
-		 <form>
-         <input type="checkbox" id="item1" value="19" />
-         <label for="item1">Huggies Diapers ($19.00)</label>
-         <input type="checkbox" id="item2" value="24" />
-         <label for="item2">Pampers Diapers ($24.00)</label>
-         <input type="checkbox" id="item3" value="25" />
-         <label for="item3">Luvs Diapers ($25.00)</label>
-         <input type="checkbox" id="item4" value="17" />
-         <label for="item4">Parents Choice Diapers ($17.00)</label>
-         <input type="checkbox" id="item5" value="13" />
-         <label for="item5">Huggies Wipes ($13.00)</label>
-		 <input type="checkbox" id="item5" value="12" />
-         <label for="item6">Pampers Wipes ($12.00)</label>
-		 <input type="checkbox" id="item5" value="13" />
-         <label for="item7">Luvs Wipes ($13.00)</label>
-		 <input type="checkbox" id="item5" value="9" />
-         <label for="item8">Parents Choice Wipes ($9.00)</label>
-         <input type="button" value="Submit" id="sButton" />
+		<h3>          
+		</h3>
+      <h2>Create An Account</h2>
+      <form>
+         <fieldset class="text">
+            <label for="uname">Username</label>
+            <input type="text" id="uname" />
+            <p id="usernameError" class="errorMsg"></p>
+            <label for="pw1">Password</label>
+            <input type="password" id="pw1" />
+            <label for="pw2">Password (confirm)</label>
+            <input type="password" id="pw2" />
+            <p id="passwordError" class="errorMsg"></p>
+            <label for="email">Email Address</label>
+            <input type="email" id="emailbox" />
+            <p id="emailError" class="errorMsg"></p>
+         </fieldset>
+         <fieldset class="checks">
+            <legend><span>Preferred Diapers and Wipes</span></legend>
+            <input type="checkbox" id="fire" value="Huggies Diapers" name="lodgings" />
+            <label for="fire" id="fireLabel">Huggies Diapers</label>
+            <input type="checkbox" id="horseshoe" value="Luvs Diapers" name="lodgings" />
+            <label for="horseshoe" id="horseshoeLabel">Luvs Diapers</label>
+            <input type="checkbox" id="spruce" value="Pampers Diapers" name="lodgings" />
+            <label for="spruce" id="spruceLabel">Pampers Diapers</label>
+            <input type="checkbox" id="ursamajor" value="Smart Choice Diapers" name="lodgings" />
+            <label for="ursamajor" id="ursamajorLabel">Smart Choice Diapers</label>
+            <input type="checkbox" id="bearmeadow" value="Huggies Wipes" name="lodgings" />
+            <label for="bearmeadow" id="bearmeadowLabel">Huggies Wipes</label>
+            <input type="checkbox" id="lakeside" value="Luvs Wipes" name="lodgings" />
+            <label for="lakeside" id="lakesideLabel">Luvs Wipes</label>
+            <input type="checkbox" id="leadfoot" value="Pampers Wipes" name="lodgings" />
+            <label for="leadfoot" id="leadfootLabel">Pampers Wipes</label>
+            <input type="checkbox" id="talus" value="Smart Choice Wipes" name="lodgings" />
+            <label for="talus" id="talusLabel">Smart Choice Wipes</label>
+         </fieldset>
+         <input type="button" id="createBtn" value="Create Account" />
       </form>
-      <div>
-         <p id="total"></p>
-      </div>
-		</article>
-		</section>
+      <section id="profile">
+         <h3>Profile</h3>
+         <div id="usernameSection">
+            <h4>Username</h4>
+            <p id="profileUsername"></p>
+         </div>
+         <div id="emailSection">
+            <h4>Email address</h4>
+            <p id="profileEmail"></p>
+         </div>
+         <div id="lodgingsSection">
+            <h4>Preferred Diapers and Wipes</h4>
+            <ul id="profileLodgings"></ul>
+         </div>
+      </section>
+   </article>
+	</section>	
 		
 		<section>
 		<p>
