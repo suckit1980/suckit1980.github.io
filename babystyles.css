@@ -144,7 +144,7 @@ line-height: 1.1em;
 
 /* form */
 form {
-   width: 441px;
+   width: 100%;
    float: left;
 }
 
@@ -393,10 +393,18 @@ label {
 /* total div */
 article div {
    width: 50%;
-   float: right;
+   float: left;
    font-size: 18px;
    font-weight: bold;
 }
 
-
+#map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
